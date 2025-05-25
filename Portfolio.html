@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Baptiste Paul</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Portfolio de Baptiste Paul</h1>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#presentation">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#responsable">Numérique Responsable</a></li>
+        <li><a href="#veille">Veille</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    toggleButton.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      toggleButton.textContent = body.classList.contains("dark-mode")
+        ? "☀️ Mode Jour"
+        : "🌙 Mode Nuit";
+    });
+  </script>
+  </header>
+
+  <section id="accueil">
+    <h2>Bienvenue sur mon portfolio</h2>
+    <p>Technicien supérieur en informatique spécialisé en cybersécurité. Découvrez ici mes compétences, projets et engagements dans le numérique responsable.</p>
+  </section>
+
+  <section id="presentation">
+    <h2>À propos de moi</h2>
+    <img src="photo-profil.jpg" alt="Photo de Baptiste Paul" style="width:150px; border-radius:50%; display:block; margin:auto;">
+    <p>Je suis Baptiste Paul, étudiant en deuxième année de BUT Informatique. Passionné par la cybersécurité, je souhaite devenir consultant dans ce domaine. Ce portfolio met en valeur les projets, compétences et engagements qui jalonnent mon parcours.</p>
+  </section>
+
+  <section id="competences">
+    <h2>Compétences</h2>
+    <ul>
+      <li><strong>Cybersécurité :</strong> Initiation à l'automatisation avec Ansible, durcissement système, bonnes pratiques de sécurité réseau</li>
+      <li><strong>Programmation :</strong> Développement en C++, C#, SQL, HTML/CSS, utilisation de Blueprint sous Unreal Engine</li>
+      <li><strong>Réseaux & Systèmes :</strong> Administration de systèmes Linux (Rocky Linux, Debian), virtualisation de services</li>
+      <li><strong>Développement de jeux vidéo :</strong> Conception de gameplay, moteur physique (Unity, Unreal), UX/UI et narration interactive</li>
+      <li><strong>Gestion de projet :</strong> Méthodologie SCRUM, travail en équipe, documentation technique</li>
+      <li><strong>Compétences transversales :</strong> Communication, esprit critique, autonomie, recherche documentaire</li>
+    </ul>
+  </section>
+
+ <section id="projets">
+  <h2>Projets</h2>
+
+  <article>
+    <h3>🎮 Project Legions: Story of Amaltheis – Un nouveau jeu de combat innovant</h3>
+    <img src="PLSA.png" alt="Project Legions Story of Amaltheis">
+    <p><strong>Contexte :</strong> Projet étudiant en équipe, réalisé dans le cadre d'un atelier de création vidéoludique.</p>
+    <p><strong>Objectifs :</strong> Concevoir un jeu de combat (fighting game) innovant mêlant mécanique stratégique et ambiance futuriste.</p>
+    <p><strong>Missions :</strong> Étude des jeux concurrents, conception des mécaniques, développement du gameplay en C++ et Blueprint.</p>
+    <p><strong>Outils :</strong> Unreal Engine 5, C++, Blueprint</p>
+    <p><strong>Compétences :</strong> Programmation, game design, UI/UX, travail en équipe</p>
+  </article>
+
+  <article>
+    <h3>🗃️ Base de données sécurisée</h3>
+    <img src="bdd logo.jpeg" alt="Projet base de données">
+    <p><strong>Contexte :</strong> Projet universitaire réalisé en équipe selon la méthode SCRUM.</p>
+    <p><strong>Objectifs :</strong> Concevoir une base de données sécurisée pour la gestion d’inventaire d’une PME.</p>
+    <p><strong>Missions :</strong> Modélisation conceptuelle, rédaction des requêtes SQL, mise en place des rôles et des permissions, documentation.</p>
+    <p><strong>Outils :</strong> MySQL, Git, Lucidchart</p>
+    <p><strong>Compétences :</strong> SQL, sécurité des données, collaboration agile</p>
+  </article>
+
+  <article>
+    <h3>🕊️ Humanity – Musée virtuel sur Martin Luther King</h3>
+    <img src="Humanity.png" alt="Projet Humanity">
+    <p><strong>Contexte :</strong> Projet étudiant réalisé en parallèle des cours, avec une équipe motivée autour d’un thème engagé.</p>
+    <p><strong>Objectifs :</strong> Créer un musée virtuel interactif retraçant la vie et les combats de Martin Luther King.</p>
+    <p><strong>Missions :</strong> Recherches historiques, modélisation 3D, scénarisation, développement interactif avec Unity.</p>
+    <p><strong>Outils :</strong> Unity, C#, Blender</p>
+    <p><strong>Compétences :</strong> Histoire, narration numérique, modélisation, travail d’équipe, engagement sociétal</p>
+  </article>
+</section>
+
+  <section id="veille">
+    <h2>Veille</h2>
+    <p>Analyse de 2 portfolios inspirants :</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Portfolio</th>
+          <th>Design</th>
+          <th>Contenu</th>
+          <th>Fonctionnalités</th>
+          <th>Accessibilité</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Portfolio A</td>
+          <td>Minimaliste, sombre</td>
+          <td>3 projets, CV</td>
+          <td>PDF, contact</td>
+          <td>Bonne</td>
+        </tr>
+        <tr>
+          <td>Portfolio B</td>
+          <td>Coloré, animations</td>
+          <td>Projets interactifs</td>
+          <td>Dark mode, responsive</td>
+          <td>Moyenne</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>Conclusion :</strong> J’ai choisi un design clair, responsive, avec mise en avant des projets par l’image et une navigation fluide.</p>
+  </section>
+
+  <section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <img src="CV.png" alt="CV de Baptiste Paul" style="width:100%; max-width:800px; border-radius:10px;">
+    <p><a href="CV.png" download>Télécharger mon CV</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 <a href="mailto:baptistepaul4300@gmail.com">baptistepaul4300@gmail.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/baptiste-paul1/" target="_blank">LinkedIn</a></p>
+  </section>
+
+  <footer>
+    <p><a href="#accueil">Retour en haut</a> | Mentions légales</p>
+  </footer>
+</body>
+</html>
