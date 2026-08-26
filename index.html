@@ -1,103 +1,334 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio - Baptiste Paul</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baptiste Paul — Portfolio</title>
+<meta name="description" content="Portfolio de Baptiste Paul, technicien supérieur en informatique — infrastructure, réseau et cybersécurité.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%23060B14%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22%233AA6FF%22/></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Portfolio de Baptiste Paul</h1>
-    <nav>
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#presentation">À propos</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#responsable">Numérique Responsable</a></li>
-        <li><a href="#veille">Veille</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="dot"></span> BAPTISTE PAUL</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#a-propos">À propos</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#projets">Projets</a>
+      <a href="#competences">Compétences</a>
+      <a href="numerique-responsable.html">Numérique responsable</a>
+      <a href="cv.html">CV</a>
+      <a href="#contact">Contact</a>
     </nav>
- 
-  </header>
+    <div class="nav-right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Basculer entre thème clair et sombre">
+        <span class="knob"></span>
+      </button>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-  <section id="accueil">
-    <h2>Bienvenue sur mon portfolio</h2>
-    <p>Technicien supérieur en informatique spécialisé en cybersécurité. Découvrez ici mes compétences, projets et engagements dans le numérique responsable.</p>
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="accueil">
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="hero-content">
+        <p class="eyebrow">Futur consultant en cybersécurité</p>
+        <h1>Baptiste Paul — <span class="accent">infrastructure &amp; cybersécurité</span></h1>
+        <p class="lead">Passionné par l'informatique depuis plusieurs années, je me projette vers le métier de consultant en cybersécurité — porté par mon esprit logique et ma curiosité pour les scénarios d'attaque informatique.</p>
+        <div class="hero-meta">
+          <span>BUT Informatique Graphique — 3e année</span>
+          <span>IUT Clermont Auvergne</span>
+          <span>Le Puy-en-Velay</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+          <a href="cv.html" class="btn btn-ghost">Télécharger mon CV</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
   </section>
 
-  <section id="presentation">
-    <h2>À propos de moi</h2>
-    <img src="photo-profil.jpg" alt="Photo de Baptiste Paul" style="width:150px; border-radius:50%; display:block; margin:auto;">
-    <p>Je suis Baptiste Paul, étudiant en deuxième année de BUT Informatique. Passionné par la cybersécurité, je souhaite devenir consultant dans ce domaine. Ce portfolio met en valeur les projets, compétences et engagements qui jalonnent mon parcours.</p>
+  <!-- ============ À PROPOS / PPP ============ -->
+  <section class="section" id="a-propos">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">À propos</p>
+        <h2>Mon profil &amp; mon projet professionnel</h2>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="about-photo">
+            <img src="assets/img/profile_photo.jpg" alt="Photo de Baptiste Paul">
+          </div>
+          <ul class="about-facts">
+            <li><b>Formation</b> BUT Informatique, IUT Clermont Auvergne (2023–2026)</li>
+            <li><b>Bac</b> Général, spé. Maths/NSI, mention Bien (2023)</li>
+            <li><b>Basé à</b> Le Puy-en-Velay (43)</li>
+            <li><b>Langues</b> Anglais (B1) · Espagnol (A2)</li>
+            <li><b>Centres d'intérêt</b> Haltérophilie, théâtre amateur, volley</li>
+          </ul>
+        </div>
+        <div class="about-text reveal">
+          <p>Passionné par l'informatique depuis plusieurs années, je me projette vers le métier de consultant en cybersécurité.</p>
+          <p>Pour atteindre cet objectif, j'ai intégré l'IUT du Puy-en-Velay afin d'y valider le diplôme du BUT Informatique appliqué à l'image. Ma formation actuelle me permettra d'intégrer ensuite un master en sécurité informatique.</p>
+          <p>Ce que j'aime en particulier dans la cybersécurité ? La diversité des scénarios d'attaque informatique, comme par exemple les malwares ou les attaques DoS. Je pense que mon esprit logique est un vrai atout pour ce domaine.</p>
+          <p>Curieux et persévérant, j'aime développer à la fois mon esprit logique et mon sens créatif, notamment à travers ma passion pour les casse-têtes et les énigmes — des activités qui m'aident à aborder les problèmes sous différents angles et à trouver des solutions innovantes.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="competences">
-    <h2>Compétences</h2>
-    <ul>
-      <li><strong>Cybersécurité :</strong> Initiation à l'automatisation avec Ansible, durcissement système, bonnes pratiques de sécurité réseau</li>
-      <li><strong>Programmation :</strong> Développement en C++, C#, SQL, HTML/CSS, utilisation de Blueprint sous Unreal Engine</li>
-      <li><strong>Réseaux & Systèmes :</strong> Administration de systèmes Linux (Rocky Linux, Debian), virtualisation de services</li>
-      <li><strong>Développement de jeux vidéo :</strong> Conception de gameplay, moteur physique (Unity, Unreal), UX/UI et narration interactive</li>
-      <li><strong>Gestion de projet :</strong> Méthodologie SCRUM, travail en équipe, documentation technique</li>
-      <li><strong>Compétences transversales :</strong> Communication, esprit critique, autonomie, recherche documentaire</li>
-    </ul>
+  <div class="net-divider" aria-hidden="true">
+    <svg viewBox="0 0 420 46"><path d="M0 23 L120 23 L150 8 L270 38 L300 23 L420 23"/><circle cx="120" cy="23" r="3"/><circle cx="270" cy="38" r="3"/><circle cx="300" cy="23" r="3"/></svg>
+  </div>
+
+  <!-- ============ PARCOURS ============ -->
+  <section class="section section--tight" id="parcours">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Parcours</p>
+        <h2>Formation &amp; expériences</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <p class="date">2025 — 2026</p>
+          <h4>BUT Informatique Graphique, 3e année — Alternance</h4>
+          <p>Centre Hospitalier Émile Roux · Pôle Sécurité · Fiabilisation et sécurisation du système informatique.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="date">Mars — Mai 2025</p>
+          <h4>Stage 2e année</h4>
+          <p>Centre Hospitalier Émile Roux · Automatisation de procédures de reprise après panne avec Ansible.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="date">2023 — 2025</p>
+          <h4>BUT Informatique Graphique, 1re &amp; 2e année</h4>
+          <p>IUT Clermont Auvergne, Le Puy-en-Velay.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="date">2020 — 2023</p>
+          <h4>Baccalauréat général, spé. Mathématiques / NSI</h4>
+          <p>Lycée Charles et Adrien Dupuy, Le Puy-en-Velay · Mention Bien.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
- <section id="projets">
-  <h2>Projets</h2>
+  <div class="net-divider" aria-hidden="true">
+    <svg viewBox="0 0 420 46"><path d="M0 23 L120 23 L150 8 L270 38 L300 23 L420 23"/><circle cx="120" cy="23" r="3"/><circle cx="270" cy="38" r="3"/><circle cx="300" cy="23" r="3"/></svg>
+  </div>
 
-  <article>
-    <h3>🎮 Project Legions: Story of Amaltheis – Un nouveau jeu de combat innovant</h3>
-    <img src="PLSA.png" alt="Project Legions Story of Amaltheis">
-    <p><strong>Contexte :</strong> Projet étudiant en équipe, réalisé dans le cadre d'un atelier de création vidéoludique.</p>
-    <p><strong>Objectifs :</strong> Concevoir un jeu de combat (fighting game) innovant mêlant mécanique stratégique et ambiance futuriste.</p>
-    <p><strong>Missions :</strong> Étude des jeux concurrents, conception des mécaniques, développement du gameplay en C++ et Blueprint.</p>
-    <p><strong>Outils :</strong> Unreal Engine 5, C++, Blueprint</p>
-    <p><strong>Compétences :</strong> Programmation, game design, UI/UX, travail en équipe</p>
-  </article>
+  <!-- ============ PROJETS ============ -->
+  <section class="section" id="projets">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Projets</p>
+        <h2>Réalisations</h2>
+        <p>Un projet tutoré et trois projets menés en formation ou en entreprise.</p>
+      </div>
 
-  <article>
-    <h3>🗃️ Base de données sécurisée</h3>
-    <img src="bdd logo.jpeg" alt="Projet base de données">
-    <p><strong>Contexte :</strong> Projet universitaire réalisé en équipe selon la méthode SCRUM.</p>
-    <p><strong>Objectifs :</strong> Concevoir une base de données sécurisée pour la gestion d’inventaire d’une PME.</p>
-    <p><strong>Missions :</strong> Modélisation conceptuelle, rédaction des requêtes SQL, mise en place des rôles et des permissions, documentation.</p>
-    <p><strong>Outils :</strong> MySQL, Git, Lucidchart</p>
-    <p><strong>Compétences :</strong> SQL, sécurité des données, collaboration agile</p>
-  </article>
+      <div class="projects-grid">
 
-  <article>
-    <h3>🕊️ Humanity – Musée virtuel sur Martin Luther King</h3>
-    <img src="Humanity.png" alt="Projet Humanity">
-    <p><strong>Contexte :</strong> Projet étudiant réalisé en parallèle des cours, avec une équipe motivée autour d’un thème engagé.</p>
-    <p><strong>Objectifs :</strong> Créer un musée virtuel interactif retraçant la vie et les combats de Martin Luther King.</p>
-    <p><strong>Missions :</strong> Recherches historiques, modélisation 3D, scénarisation, développement interactif avec Unity.</p>
-    <p><strong>Outils :</strong> Unity, C#, Blender</p>
-    <p><strong>Compétences :</strong> Histoire, narration numérique, modélisation, travail d’équipe, engagement sociétal</p>
-  </article>
+        <article class="card project-card reveal">
+          <div class="thumb">
+            <span class="status">Alternance · 3e année</span>
+            <img src="assets/img/projects/alternance_cover.jpg" alt="Synchronisation GLPI / vSphere">
+          </div>
+          <div class="body">
+            <div class="tags"><span class="tag">Ansible</span><span class="tag">API REST</span><span class="tag">GLPI</span></div>
+            <h3>Fiabiliser l'inventaire d'un hôpital</h3>
+            <p>Synchronisation automatique des machines virtuelles entre vSphere et GLPI, à l'échelle d'un groupement hospitalier.</p>
+            <a href="projet.html?id=alternance-glpi" class="more">Voir le projet <span class="arrow">→</span></a>
+          </div>
+        </article>
 
-    <p><strong>Conclusion :</strong> J’ai choisi un design clair, responsive, avec mise en avant des projets par l’image et une navigation fluide.</p>
+        <article class="card project-card reveal">
+          <div class="thumb">
+            <span class="status">Stage · 2e année</span>
+            <img src="assets/img/projects/stage_cover.jpg" alt="Automatisation Ansible / Nextcloud">
+          </div>
+          <div class="body">
+            <div class="tags"><span class="tag">Ansible</span><span class="tag">Docker</span><span class="tag">Nextcloud</span></div>
+            <h3>Automatiser une reprise après panne</h3>
+            <p>Déploiement automatisé d'un service Nextcloud critique, restauré en moins de 5 minutes grâce à des rôles Ansible modulaires.</p>
+            <a href="projet.html?id=stage-ansible-nextcloud" class="more">Voir le projet <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="card project-card reveal">
+          <div class="thumb">
+            <span class="status">Projet étudiant</span>
+            <img src="assets/img/projects/legions_cover.png" alt="Project Legions: Story of Amaltheis">
+          </div>
+          <div class="body">
+            <div class="tags"><span class="tag">Unreal Engine 5</span><span class="tag">C++</span><span class="tag">Blueprint</span></div>
+            <h3>Project Legions: Story of Amaltheis</h3>
+            <p>Un jeu de combat innovant mêlant mécaniques stratégiques et ambiance futuriste, développé en équipe.</p>
+            <a href="projet.html?id=legions" class="more">Voir le projet <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="card project-card reveal">
+          <div class="thumb">
+            <span class="status">Projet étudiant</span>
+            <img src="assets/img/projects/humanity_cover.png" alt="Humanity — Musée virtuel sur Martin Luther King">
+          </div>
+          <div class="body">
+            <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Blender</span></div>
+            <h3>Humanity — Musée virtuel</h3>
+            <p>Un musée virtuel interactif retraçant la vie et les combats de Martin Luther King, conçu en équipe.</p>
+            <a href="projet.html?id=humanity" class="more">Voir le projet <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="card project-card reveal">
+          <div class="thumb">
+            <span class="status">Projet étudiant</span>
+            <img src="assets/img/projects/bdd_cover.png" alt="Base de données sécurisée">
+          </div>
+          <div class="body">
+            <div class="tags"><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">SCRUM</span></div>
+            <h3>Base de données sécurisée</h3>
+            <p>Conception d'une base de données sécurisée pour la gestion d'inventaire d'une PME, en méthode agile SCRUM.</p>
+            <a href="projet.html?id=bdd-securisee" class="more">Voir le projet <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
   </section>
 
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <img src="CV.png" alt="CV de Baptiste Paul" style="width:100%; max-width:800px; border-radius:10px;">
-    <p><a href="CV.png" download>Télécharger mon CV</a></p>
+  <div class="net-divider" aria-hidden="true">
+    <svg viewBox="0 0 420 46"><path d="M0 23 L120 23 L150 8 L270 38 L300 23 L420 23"/><circle cx="120" cy="23" r="3"/><circle cx="270" cy="38" r="3"/><circle cx="300" cy="23" r="3"/></svg>
+  </div>
+
+  <!-- ============ COMPÉTENCES ============ -->
+  <section class="section" id="competences">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Compétences</p>
+        <h2>Ce que je sais faire</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="card skill-card reveal">
+          <div class="icon">01</div>
+          <h4>Infrastructure &amp; automatisation</h4>
+          <p>Déploiement et automatisation de services avec Ansible, conteneurisation Docker.</p>
+          <div class="skill-tags"><span class="tag">Ansible</span><span class="tag">Docker</span><span class="tag">Linux</span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <div class="icon">02</div>
+          <h4>Réseau &amp; sécurité</h4>
+          <p>Segmentation réseau, sécurisation des accès (bastion, pare-feu), bonnes pratiques du moindre privilège.</p>
+          <div class="skill-tags"><span class="tag">Réseau</span><span class="tag">Pare-feu</span><span class="tag">VLAN</span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <div class="icon">03</div>
+          <h4>Développement &amp; intégration</h4>
+          <p>Scripts Python, intégration d'API REST, gestion de versions avec Git.</p>
+          <div class="skill-tags"><span class="tag">Python</span><span class="tag">API REST</span><span class="tag">Git</span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <div class="icon">04</div>
+          <h4>Création 3D &amp; jeu vidéo</h4>
+          <p>Modélisation 3D et développement de jeux vidéo, du prototypage au gameplay.</p>
+          <div class="skill-tags"><span class="tag">Unreal Engine 5</span><span class="tag">Unity</span><span class="tag">Blender</span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <div class="icon">05</div>
+          <h4>Gestion de projet</h4>
+          <p>Structuration de projets techniques de bout en bout, documentation, communication en équipe.</p>
+          <div class="skill-tags"><span class="tag">Planification</span><span class="tag">Documentation</span></div>
+        </div>
+        <div class="card skill-card reveal">
+          <div class="icon">06</div>
+          <h4>Bases de données</h4>
+          <p>Modélisation, sécurisation et interrogation de bases de données relationnelles.</p>
+          <div class="skill-tags"><span class="tag">SQL</span><span class="tag">MySQL</span></div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 <a href="mailto:baptistepaul4300@gmail.com">baptistepaul4300@gmail.com</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/baptiste-paul1/" target="_blank">LinkedIn</a></p>
+  <!-- ============ NUMÉRIQUE RESPONSABLE (teaser) ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="nr-banner reveal">
+        <div>
+          <p class="eyebrow">Numérique responsable</p>
+          <h2 style="font-size:1.7rem; margin-bottom:14px;">Une pratique du numérique plus sobre</h2>
+          <p class="text-dim" style="margin-bottom:24px;">Tout au long de ma formation, j'ai cherché à intégrer les enjeux de sobriété numérique dans mes projets techniques.</p>
+          <a href="numerique-responsable.html" class="btn btn-ghost">En savoir plus</a>
+        </div>
+        <ul class="nr-list">
+          <li><span class="n">01</span> [Bonne pratique appliquée — ex : optimisation des ressources serveur]</li>
+          <li><span class="n">02</span> [Bonne pratique appliquée — ex : choix d'outils libres et légers]</li>
+          <li><span class="n">03</span> [Bonne pratique appliquée — ex : réduction des transferts de données]</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p><a href="#accueil">Retour en haut</a> | Mentions légales</p>
-  </footer>
+  <!-- ============ CV (teaser) ============ -->
+  <section class="section section--tight">
+    <div class="container about-grid" style="grid-template-columns: 1fr 300px;">
+      <div class="reveal">
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h2 style="font-size:1.7rem; margin-bottom:16px;">Mon parcours en un coup d'œil</h2>
+        <p class="text-dim" style="margin-bottom:26px; max-width:520px;">Retrouve mon CV complet, consultable en ligne ou téléchargeable au format PDF.</p>
+        <div class="hero-actions">
+          <a href="cv.html" class="btn btn-primary">Voir mon CV</a>
+          <a href="assets/cv/cv.pdf" class="btn btn-ghost" download>Télécharger le PDF</a>
+        </div>
+      </div>
+      <div class="cv-preview reveal">
+        <img src="assets/img/cv_preview.jpg" alt="Aperçu du CV de Baptiste Paul" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+      </div>
+    </div>
+  </section>
+
+  <div class="net-divider" aria-hidden="true">
+    <svg viewBox="0 0 420 46"><path d="M0 23 L120 23 L150 8 L270 38 L300 23 L420 23"/><circle cx="120" cy="23" r="3"/><circle cx="270" cy="38" r="3"/><circle cx="300" cy="23" r="3"/></svg>
+  </div>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Échangeons</h2>
+        <p>Une question, une opportunité ? Retrouve-moi ici :</p>
+      </div>
+      <div class="reveal" style="max-width: 480px;">
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/baptiste-paul1/" target="_blank" rel="noopener"><span class="ic">in</span> linkedin.com/in/baptiste-paul1</a>
+          <a href="https://github.com/Baptou-hub" target="_blank" rel="noopener"><span class="ic">&lt;/&gt;</span> github.com/Baptou-hub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Baptiste Paul — Portfolio BUT Informatique Graphique</p>
+    <p>Conçu &amp; codé sur mesure · Hébergé sur GitHub Pages</p>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/network-bg.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
