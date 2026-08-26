@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projet — Baptiste Paul</title>
+<meta name="description" content="Détail d'un projet du portfolio de Baptiste Paul.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%23060B14%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22%233AA6FF%22/></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header is-scrolled">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="dot"></span> BAPTISTE PAUL</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html#a-propos">À propos</a>
+      <a href="index.html#parcours">Parcours</a>
+      <a href="index.html#projets">Projets</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="numerique-responsable.html">Numérique responsable</a>
+      <a href="cv.html">CV</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Basculer entre thème clair et sombre">
+        <span class="knob"></span>
+      </button>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <a href="index.html#projets" class="back-link">← Retour aux projets</a>
+      <p class="eyebrow" id="p-kicker">…</p>
+      <h1 id="p-title">…</h1>
+      <p class="subtitle" id="p-subtitle">…</p>
+      <div class="project-meta-row" id="p-tags"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:60px;">
+    <div class="container">
+      <img id="p-cover" src="" alt="" style="width:100%; aspect-ratio:16/6; object-fit:cover; border-radius:18px; border:1px solid var(--border);">
+
+      <div class="project-body">
+        <div class="project-main">
+
+          <h2>Contexte</h2>
+          <p id="p-contexte"></p>
+
+          <h2>Objectifs</h2>
+          <ul id="p-objectifs"></ul>
+
+          <h2>Missions principales</h2>
+          <ul id="p-missions"></ul>
+
+          <h2>Étapes clés</h2>
+          <ul id="p-etapes"></ul>
+
+          <h2>Apports académiques</h2>
+          <p id="p-apports"></p>
+
+          <h2>Démarche de numérique responsable</h2>
+          <p id="p-nr"></p>
+
+          <h2>Galerie</h2>
+          <div class="gallery" id="p-gallery"></div>
+
+          <h2>Conclusion réflexive</h2>
+          <div class="reflect-box"><p id="p-conclusion"></p></div>
+
+          <div id="p-placeholder-note" class="pseudo-code" style="display:none; margin-top:40px;">
+<span class="kw"># NOTE POUR TOI</span>
+Cette fiche est un gabarit avec du contenu à compléter.
+Édite le fichier <span class="kw">assets/js/projets-data.js</span> et remplis l'entrée
+correspondant à ce projet — tous les champs (contexte, objectifs, missions,
+étapes, compétences, outils, galerie, lien) fonctionnent de la même façon
+que pour les deux projets déjà renseignés (stage et alternance).
+          </div>
+        </div>
+
+        <aside class="project-side">
+          <div class="side-block">
+            <h4>Période</h4>
+            <p id="p-period" style="font-size:.92rem;"></p>
+          </div>
+          <div class="side-block">
+            <h4>Structure</h4>
+            <p id="p-org" style="font-size:.92rem;"></p>
+          </div>
+          <div class="side-block">
+            <h4>Outils</h4>
+            <div class="tags" id="p-outils"></div>
+          </div>
+          <div class="side-block">
+            <h4>Compétences techniques</h4>
+            <div class="tags" id="p-comp-tech"></div>
+          </div>
+          <div class="side-block">
+            <h4>Compétences transversales</h4>
+            <div class="tags" id="p-comp-trans"></div>
+          </div>
+          <div class="side-block">
+            <h4>Qualités humaines</h4>
+            <div class="tags" id="p-comp-human"></div>
+          </div>
+          <a id="p-lien" href="#" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">Voir le projet finalisé</a>
+          <p id="p-lien-note" class="text-dim" style="font-size:.82rem; display:none;"></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Baptiste Paul — Portfolio BUT Informatique Graphique</p>
+    <p><a href="index.html#projets">← Retour aux projets</a></p>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/projets-data.js"></script>
+<script src="assets/js/projet-render.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

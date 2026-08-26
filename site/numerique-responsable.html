@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Numérique responsable — Baptiste Paul</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%23060B14%22/><circle cx=%2250%22 cy=%2250%22 r=%2210%22 fill=%22%233AA6FF%22/></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header is-scrolled">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="dot"></span> BAPTISTE PAUL</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html#a-propos">À propos</a>
+      <a href="index.html#parcours">Parcours</a>
+      <a href="index.html#projets">Projets</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="numerique-responsable.html" class="is-active">Numérique responsable</a>
+      <a href="cv.html">CV</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" data-theme-toggle aria-label="Basculer entre thème clair et sombre">
+        <span class="knob"></span>
+      </button>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:150px;">
+    <div class="container">
+      <p class="eyebrow">Numérique responsable</p>
+      <h1 style="font-size:clamp(2rem,4vw,2.8rem); margin-bottom:20px; max-width:760px;">Une pratique du numérique plus sobre et plus consciente</h1>
+      <p class="text-dim" style="max-width:680px; margin-bottom:60px; font-size:1.05rem;">
+        Travaillant sur des infrastructures critiques, j'ai vite compris qu'une bonne solution technique n'est pas seulement celle qui fonctionne, mais aussi celle qui consomme le moins de ressources et reste maintenable dans le temps. C'est une exigence que j'essaie d'intégrer dès la conception de mes projets, pas comme une contrainte ajoutée à la fin.
+      </p>
+
+      <div class="about-grid" style="grid-template-columns: 1fr 1fr; margin-bottom:80px;">
+        <div class="reveal">
+          <h2 style="font-size:1.4rem; margin-bottom:16px;">Objectifs de la formation</h2>
+          <p class="text-dim">
+            Le BUT Informatique intègre le numérique responsable comme un axe transversal plutôt qu'un module isolé : il infuse la manière de concevoir un projet, du choix des outils à l'architecture technique. L'objectif est de sortir de la formation avec le réflexe de questionner l'impact d'une solution — environnemental, mais aussi social et éthique — au même titre que sa performance ou son coût.
+          </p>
+        </div>
+        <div class="reveal">
+          <h2 style="font-size:1.4rem; margin-bottom:16px;">Notions abordées</h2>
+          <ul style="display:grid; gap:12px;">
+            <li class="text-dim">Écoconception logicielle et sobriété des infrastructures</li>
+            <li class="text-dim">Cycle de vie du matériel informatique (fabrication, usage, fin de vie)</li>
+            <li class="text-dim">Accessibilité numérique (référentiel WCAG)</li>
+            <li class="text-dim">Éthique des données et protection de la vie privée</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-head reveal">
+        <p class="eyebrow">En pratique</p>
+        <h2>Engagements &amp; bonnes pratiques mises en œuvre</h2>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="card skill-card">
+          <div class="icon">01</div>
+          <h4>Automatisation raisonnée</h4>
+          <p>Réduire les interventions manuelles répétitives et les erreurs associées, plutôt que de multiplier les ressources pour compenser.</p>
+        </div>
+        <div class="card skill-card">
+          <div class="icon">02</div>
+          <h4>Conteneurisation légère</h4>
+          <p>Privilégier Docker à des machines virtuelles complètes pour les environnements de test, afin de limiter l'empreinte des ressources utilisées.</p>
+        </div>
+        <div class="card skill-card">
+          <div class="icon">03</div>
+          <h4>Hébergement sobre</h4>
+          <p>Ce portfolio est un site statique (sans base de données ni serveur applicatif), hébergé gratuitement sur GitHub Pages — une architecture volontairement minimale.</p>
+        </div>
+        <div class="card skill-card">
+          <div class="icon">04</div>
+          <h4>Accessibilité du portfolio</h4>
+          <p>Ce site respecte les préférences de réduction des animations, offre un contraste suffisant et reste utilisable au clavier.</p>
+        </div>
+        <div class="card skill-card">
+          <div class="icon">05</div>
+          <h4>Réutilisation plutôt que duplication</h4>
+          <p>Sur le projet de base de données, une gestion fine des rôles et permissions a permis d'éviter la duplication de données entre services.</p>
+        </div>
+        <div class="card skill-card">
+          <div class="icon">06</div>
+          <h4>Optimisation des assets</h4>
+          <p>Sur mes projets en informatique graphique, j'attache une attention particulière au poids des modèles 3D et des textures, pour des temps de chargement plus courts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Baptiste Paul — Portfolio BUT Informatique Graphique</p>
+    <p><a href="index.html">← Retour à l'accueil</a></p>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
